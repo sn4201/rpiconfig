@@ -1,0 +1,12 @@
+variant: fcos
+version: 1.4.0
+storage:
+  luks:
+    - name: ext
+      device: /dev/sda1
+  filesystems:
+    - path: /var/lib/ext
+      device: /dev/mapper/ext
+      format: ext4
+      label: DATA
+      with_mount_unit: true
